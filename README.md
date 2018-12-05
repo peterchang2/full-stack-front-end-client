@@ -1,2 +1,2 @@
 
-## A simple full stack project
+## A simple full stack project front end
