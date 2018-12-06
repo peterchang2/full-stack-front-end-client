@@ -1,1 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Nunito|Permanent+Marker');
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+.site-name {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  margin: 0;
+
+}
+
+.upload-section {
+  display: block;
+  .upload-area {
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    .location {
+      margin: 0 auto;
+    }
+  }
+}
