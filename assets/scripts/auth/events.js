@@ -15,6 +15,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
+  console.log('this is userdata' + userData)
   $(event.target).trigger('reset')
   api.signIn(userData)
     .then(ui.signInSuccess)

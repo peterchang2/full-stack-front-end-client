@@ -22,7 +22,9 @@ const signUpSuccess = function (signUpResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  console.log(store.user)
+  console.log('this is the token', store.user.token)
+  console.log('this is the user id', store.user.id)
+  console.log(store)
   $('.message-box').html('You Signed In Successfully')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
@@ -42,7 +44,6 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
-  store.over = true
   $('.message-box').html('You Signed Out Successfully')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
