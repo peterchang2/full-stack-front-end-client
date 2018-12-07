@@ -15,9 +15,31 @@
     <body>
       <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
+          <div class="bg-dark p-4 user-panel">
             <h5 class="text-white h4">User Panel</h5>
-            <button type="button" class="btn btn-outline-warning sign-inbtn">Sign-In</button>
+            <div class="message-box"></div>
+            <div class="auth-form" id="auth-form">
+               <form class="sign-up-form" id="sign-up-form">
+                <legend>Sign-Up</legend>
+                <input class='input-field' type="email" name="credentials[email]" placeholder="Email">
+                <input class='input-field' type="password" name="credentials[password]" placeholder="Password">
+                <input class='input-field' type="password" name="credentials[password_confirmation]" placeholder="Confirm PW">
+                <input class='form-btn' type="submit" value="Sign-Up">
+              </form>
+              <form class="sign-in-form input-field" id="sign-in-form">
+                <legend>Sign-In</legend>
+                <input class='input-field' type="email" name="credentials[email]" placeholder="Email">
+                <input class='input-field' type="password" name="credentials[password]" placeholder="Password">
+                <input class='form-btn' type="submit" value="Sign-In">
+              </form>
+              <form class="change-password-form input-field" id="change-password-form" >
+               <legend>Change-Password</legend>
+                <input class='input-field old-Pass' type="password" name="passwords[old]" placeholder="Old Password">
+                <input class='input-field new-Pass' type="password" name="passwords[new]" placeholder="New Password">
+                <input class='form-btn' type="submit" value="Change">
+              </form>
+            </div>
+            <button type="button" class="btn btn-outline-warning sign-in-btn">Sign-In</button>
             <button type="button" class="btn btn-outline-warning sign-up-btn">Sign-Up</button>
             <button type="button" class="btn btn-outline-warning sign-out-btn">Sign-Out</button>
             <button type="button" class="btn btn-outline-warning chg-pass-btn">Change-Password</button>
@@ -35,9 +57,10 @@
 
       <div class="upload-section">
         <form action="" class="upload-area">
-            <input class='location' type="text" name="" placeholder="Caption">
-            <input class='location' type="text" class="img-link" placeholder="Image Link">
-            <input class='location' type="button" class="submit" value="Upload">
+          <h2 class="disclaimer">Please use a direct image link for now thanks</h2>
+          <input class='location' type="text" name="" placeholder="Caption">
+          <input class='location' type="text" class="img-link" placeholder="Image Link">
+          <input class='location' type="button" class="submit" value="Upload">
         </form>
       </div>
 

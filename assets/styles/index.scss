@@ -1,18 +1,82 @@
 @import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Nunito|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Bree+Serif|Poppins');
+
 
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Arvo', serif;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
 }
 
 .site-name {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Bree Serif', serif;
   font-size: 30px;
   margin: 0;
-
 }
 
+.sign-out-btn,
+.chg-pass-btn {
+  display: none;
+}
+
+.user-panel {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.auth-form {
+  width: 100%;
+  text-align: right;
+
+  .input-field {
+    border-radius: 5px;
+  }
+  .sign-up-form {
+    display: none;
+    margin: 0 auto;
+  }
+
+  .sign-in-form {
+    display: none;
+    margin: 0 auto;
+  }
+
+  .change-password-form {
+    display: none;
+    margin: 0 auto;
+  }
+
+  legend {
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .form-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+  }
+}
+.btn {
+  margin-top: 20px;
+}
+
+
 .upload-section {
+  .disclaimer {
+    font-size: 12px;
+  }
   display: block;
   .upload-area {
     display: inline-block;
