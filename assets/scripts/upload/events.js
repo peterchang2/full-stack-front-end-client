@@ -3,6 +3,13 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
 
+const onGetAllImages = function (event) {
+  event.preventDefault()
+  api.getAllImages()
+    .then(ui.getAllImagesSuccess)
+    .catch(ui.failure)
+}
+
 const onUpload = function (event) {
   event.preventDefault()
   const uploadData = getFormFields(event.target)
@@ -26,5 +33,6 @@ const onGetImage = function (event) {
 
 module.exports = {
   onUpload,
-  onGetImage
+  onGetImage,
+  onGetAllImages
 }

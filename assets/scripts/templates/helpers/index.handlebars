@@ -1,0 +1,10 @@
+{{#each this as |images|}}
+  {{#images}}
+    <!-- <div class="image-id">
+      <h1>{{id}}</h1>
+    </div> -->
+    <div class="image-url" data-id={{id}}>
+      {{id}} <img src='{{url}}'>
+    </div>
+  {{/images}}
+{{/each}}

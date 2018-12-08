@@ -13,8 +13,10 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('.sign-out-btn').on('click', authEvents.onSignOut)
+
   $('.upload-area').on('submit', uploadEvents.onUpload)
   $('.get-image').on('submit', uploadEvents.onGetImage)
+  $('.get-all-image-btn').on('click', uploadEvents.onGetAllImages)
 
   $('.sign-up-btn').click(function () {
     setTimeout(function () {

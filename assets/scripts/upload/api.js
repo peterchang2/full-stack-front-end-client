@@ -6,7 +6,7 @@ const config = require('../config.js')
 const upload = function (date, caption, url) {
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/images',
+    url: config.apiUrl + '/images/',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -20,6 +20,18 @@ const upload = function (date, caption, url) {
           'user_id': store.user.id
         }
       })
+  })
+}
+
+const getAllImages = function (inputData) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/images/',
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: JSON.stringify(inputData)
   })
 }
 
@@ -67,5 +79,6 @@ const getImageId = function (imageId) {
 
 module.exports = {
   upload,
-  getImageId
+  getImageId,
+  getAllImages
 }

@@ -63,19 +63,21 @@
           <input class='location img-link' type="text" name='images[url]' placeholder="Image Link">
           <input class='location upload-btn submit' type="submit" value="Upload">
         </form>
-        <form action="" class="get-image">
-          <input type="text" name='images[id]'>
-          <input type="submit" value="Get Image">
-        </form>
+        <div class="get-image">
+          <form action="" >
+            <input type="text" name='images[id]' placeholder="Image ID">
+            <input type="submit" value="Get Image">
+          </form>
+          <button class="get-all-image-btn" value='Get-All'>Get-All</button>
+        </div>
+
         <div class="upload-message-box"></div>
       </div>
 
 
       <div class="img-wall">
-
+        <ul class="image-wall"></ul>
       </div>
-
-
 
     </body>
 </html>

@@ -1,5 +1,5 @@
 //
-
+const handle = require('../templates/helpers/index.handlebars')
 const store = require('../store.js')
 // const events = require('./events.js')
 
@@ -17,13 +17,23 @@ const uploadSuccess = function (signUpResponse) {
 
 const getImageIdSuccess = function (imageSuccess) {
   console.log(imageSuccess)
-  $('.upload-message-box').html(`Image ID: <img src="${imageSuccess.image.url}">retrieved`)
+  $('.upload-message-box').html(`<img src="${imageSuccess.image.url}">`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
+}
+
+const getAllImagesSuccess = function (getImageSuccess) {
+  console.log(getImageSuccess.images)
+  const index = handle({ images: getImageSuccess.images })
+  $('.img-wall').html(index)
+  // $('.img-wall').html(`<img src="${getImageSuccess.images.url}">`)
+  // $('.upload-message-box').removeClass('error-message')
+  // $('.upload-message-box').addClass('success-message')
 }
 
 module.exports = {
   failure,
   uploadSuccess,
-  getImageIdSuccess
+  getImageIdSuccess,
+  getAllImagesSuccess
 }

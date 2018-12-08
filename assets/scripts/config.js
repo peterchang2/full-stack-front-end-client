@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://gotpics-api.herokuapp.com/',
+  production: 'https://picstafame.herokuapp.com/',
   development: 'http://localhost:4741'
 }
 
