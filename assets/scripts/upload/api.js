@@ -46,6 +46,17 @@ const getImageId = function (imageId) {
   })
 }
 
+const deleteImageById = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/images/${id}`,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 // const signIn = function (inputData) {
 //   return $.ajax({
 //     method: 'POST',
@@ -80,5 +91,6 @@ const getImageId = function (imageId) {
 module.exports = {
   upload,
   getImageId,
-  getAllImages
+  getAllImages,
+  deleteImageById
 }

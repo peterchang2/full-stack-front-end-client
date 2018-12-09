@@ -16,24 +16,32 @@ const uploadSuccess = function (signUpResponse) {
 }
 
 const getImageIdSuccess = function (imageSuccess) {
-  console.log(imageSuccess)
+  store.imageid = imageSuccess.image.id
+  console.log(store.imageid)
   $('.upload-message-box').html(`<img src="${imageSuccess.image.url}">`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
 }
 
 const getAllImagesSuccess = function (getImageSuccess) {
-  console.log(getImageSuccess.images)
+  // console.log(getImageSuccess.images)
   const index = handle({ images: getImageSuccess.images })
-  $('.img-wall').html(index)
+  $('.image-wall').html(index)
   // $('.img-wall').html(`<img src="${getImageSuccess.images.url}">`)
   // $('.upload-message-box').removeClass('error-message')
   // $('.upload-message-box').addClass('success-message')
+}
+
+const deleteImageIdSuccess = function (deleteImageSuccess) {
+  $('.upload-message-box').html(`Image Successfully Deleted`)
+  $('.upload-message-box').removeClass('error-message')
+  $('.upload-message-box').addClass('success-message')
 }
 
 module.exports = {
   failure,
   uploadSuccess,
   getImageIdSuccess,
-  getAllImagesSuccess
+  getAllImagesSuccess,
+  deleteImageIdSuccess
 }

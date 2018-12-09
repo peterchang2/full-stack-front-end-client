@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>PicstaFame The Budget Instagram</title>
+      <title>Picsta The Really Budget Instagram</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,6 +10,7 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
 
     <body>
@@ -18,6 +19,7 @@
           <div class="bg-dark p-4 user-panel">
             <h5 class="text-white h4"><span class="user-name"></span>User Panel</h5>
             <div class="message-box"></div>
+
             <div class="auth-form" id="auth-form">
                <form class="sign-up-form" id="sign-up-form">
                 <legend>Sign-Up</legend>
@@ -38,24 +40,40 @@
                 <input class='input-field new-Pass' type="password" name="passwords[new]" placeholder="New Password">
                 <input class='form-btn' type="submit" value="Change">
               </form>
+              <form class="get-image-by-id-form">
+                <legend>Get Image By ID</legend>
+                <input type="text" name='images[id]' placeholder="Image ID">
+                <input class='form-btn' type="submit" value="Get Image">
+              </form>
+              <form class="delete-image-form">
+                <legend>Delete Image By ID</legend>
+                <input type="text" name='images[id]' placeholder="Image ID">
+                <input class='form-btn' type="submit" value="Delete Image">
+              </form>
             </div>
+
             <button type="button" class="btn btn-outline-warning sign-in-btn">Sign-In</button>
             <button type="button" class="btn btn-outline-warning sign-up-btn">Sign-Up</button>
             <button type="button" class="btn btn-outline-warning sign-out-btn">Sign-Out</button>
             <button type="button" class="btn btn-outline-warning chg-pass-btn">Change-Password</button>
+            <button type="button" class="btn btn-outline-warning get-all-image-btn">Show-All</button>
+            <button type="button" class="btn btn-outline-warning get-image-by-id-btn">Get-ID</button>
+            <!-- <button type="button" class="btn btn-outline-warning delete-image-btn">Delete</button> -->
             <span class="text-muted"></span>
           </div>
         </div>
+
         <nav class="navbar navbar-dark bg-dark">
-          <h5 class="text-white h4 site-name">PicstaFame</h5>
+          <h5 class="text-white h4 site-name">Picsta</h5>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </nav>
-      </div>
-      <!-- nav bar ends here -->
 
-      <div class="upload-section">
+      </div>
+      <!-- ================ nav bar ends here =============== -->
+
+      <div class="upload-section hidden">
         <form action="" class="upload-area" data-id='store.user.id'>
           <h2 class="disclaimer">Please use a direct image link for now thanks</h2>
           <input class='location' type="date" name="images[date]" placeholder="Date">
@@ -63,20 +81,12 @@
           <input class='location img-link' type="text" name='images[url]' placeholder="Image Link">
           <input class='location upload-btn submit' type="submit" value="Upload">
         </form>
-        <div class="get-image">
-          <form action="" >
-            <input type="text" name='images[id]' placeholder="Image ID">
-            <input type="submit" value="Get Image">
-          </form>
-          <button class="get-all-image-btn" value='Get-All'>Get-All</button>
-        </div>
-
         <div class="upload-message-box"></div>
       </div>
 
-
+      <!-- ============== Wall of images here ===============  -->
       <div class="img-wall">
-        <ul class="image-wall"></ul>
+        <div class="image-wall"></div>
       </div>
 
     </body>

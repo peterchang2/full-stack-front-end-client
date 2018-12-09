@@ -15,12 +15,13 @@ $(() => {
   $('.sign-out-btn').on('click', authEvents.onSignOut)
 
   $('.upload-area').on('submit', uploadEvents.onUpload)
-  $('.get-image').on('submit', uploadEvents.onGetImage)
+  $('.get-image-by-id-form').on('submit', uploadEvents.onGetImage)
   $('.get-all-image-btn').on('click', uploadEvents.onGetAllImages)
+  $('.img-wall').on('click', '.image-remove-btn', uploadEvents.onDeleteImage)
 
   $('.sign-up-btn').click(function () {
     setTimeout(function () {
-      $('.sign-up-form').fadeIn()
+      $('.sign-up-form').fadeToggle()
     }, 200)
     $('.sign-in-form').fadeOut(200)
     // $('.sign-in-form').fadeOut(300)
@@ -28,13 +29,17 @@ $(() => {
 
   $('.sign-in-btn').click(function () {
     setTimeout(function () {
-      $('.sign-in-form').fadeIn()
+      $('.sign-in-form').fadeToggle()
     }, 200)
     // $('.sign-in-form').fadeIn(300)
     $('.sign-up-form').fadeOut(200)
   })
 
   $('.chg-pass-btn').click(function () {
-    $('.change-password-form').fadeIn(300)
+    $('.change-password-form').fadeToggle(300)
+  })
+
+  $('.get-image-by-id-btn').click(function () {
+    $('.get-image-by-id-form').fadeToggle(300)
   })
 })

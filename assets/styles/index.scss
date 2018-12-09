@@ -6,6 +6,18 @@
   font-family: 'Arvo', serif;
 }
 
+body {
+  background-color: #fffaf3;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .success-message {
   color: #cbffb6; // bright green
 }
@@ -21,7 +33,12 @@
 }
 
 .sign-out-btn,
-.chg-pass-btn {
+.chg-pass-btn,
+.get-all-image-btn,
+.get-image-by-id-btn,
+.delete-image-btn,
+.get-image-by-id-form,
+.delete-image-form {
   display: none;
 }
 
@@ -65,19 +82,19 @@
     color: white;
     text-align: center;
     text-decoration: none;
-
   }
 }
+
 .btn {
   margin-top: 20px;
 }
 
-
+// ==============================================================
 .upload-section {
   .disclaimer {
     font-size: 12px;
   }
-  display: block;
+  // display: block;
   .upload-area {
     display: inline-block;
     margin: 10px auto;
@@ -92,29 +109,58 @@
   }
 }
 
+// ============================================================
 img {
   height: 250px;
   width: 250px;
+  margin: 0px 15px 10px 15px;
+  border-radius: 30px;
+  transform: scale(1);
+  transition: transform .2s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform .2s; /* Animation */
+  margin: 0px 15px 10px 15px;
+  border-radius: 20px;
+}
+
+h4 {
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  text-shadow: 2px;
+  margin-bottom: 0;
 }
 
 .img-wall {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-remove-btn {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-style: groove;
+}
+
+.image-wall {
+  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  align-content: center;
+  text-align: center;
+  width: 75%;
 }
 
 .get-image {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   // display: inline-block;
   // margin: 10px auto;
   text-align: center;
   width: 100%;
-  .get-all-image-btn {
-    margin-left: 10px;
-  }
 }
