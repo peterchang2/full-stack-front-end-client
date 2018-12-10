@@ -9,6 +9,12 @@ const failure = function (FailureResponse) {
   $('.upload-message-box').addClass('error-message')
 }
 
+const idFailure = function (FailureResponse) {
+  $('.upload-message-box').html('This ID does not exist')
+  $('.upload-message-box').removeClass('success-message')
+  $('.upload-message-box').addClass('error-message')
+}
+
 const uploadSuccess = function (signUpResponse) {
   $('.upload-message-box').html(`Image Successfully Uploaded`)
   $('.upload-message-box').removeClass('error-message')
@@ -17,8 +23,8 @@ const uploadSuccess = function (signUpResponse) {
 
 const getImageIdSuccess = function (imageSuccess) {
   store.imageid = imageSuccess.image.id
-  console.log(store.imageid)
-  $('.upload-message-box').html(`<img src="${imageSuccess.image.url}">`)
+  // console.log(store.imageid)
+  $('.image-wall').html(`<img src="${imageSuccess.image.url}">`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
 }
@@ -40,6 +46,7 @@ const deleteImageIdSuccess = function (deleteImageSuccess) {
 
 module.exports = {
   failure,
+  idFailure,
   uploadSuccess,
   getImageIdSuccess,
   getAllImagesSuccess,

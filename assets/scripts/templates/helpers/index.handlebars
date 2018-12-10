@@ -1,11 +1,8 @@
 {{#each this as |images|}}
   {{#images}}
-    <!-- <div class="image-id">
-      <h1>{{id}}</h1>
-    </div> -->
-    <div class="image-url" data-id={{id}}>
-      <img src='{{url}}'><h4>ID:{{id}} -- {{caption}}</h4>
-      <button type="button" name="remove" class="image-remove-btn">Remove</button>
-    </div>
+      <div class="image-url" data-id={{id}}>
+        <img src='{{url}}'><<h4>ID:{{id}} -- {{caption}}</h4>
+        <button type="button" name="remove" class="image-remove-btn">Remove</button>
+      </div>
   {{/images}}
 {{/each}}

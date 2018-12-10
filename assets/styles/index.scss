@@ -10,6 +10,17 @@ body {
   background-color: #fffaf3;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: #c7dbf4;
+}
+
+button:focus {
+  outline: none;
+}
+
 .hidden {
   display: none;
 }
@@ -19,7 +30,7 @@ body {
 }
 
 .success-message {
-  color: #cbffb6; // bright green
+  color: #2cb42c; // bright green
 }
 
 .error-message {
@@ -124,6 +135,15 @@ img:hover {
   transition: transform .2s; /* Animation */
   margin: 0px 15px 10px 15px;
   border-radius: 20px;
+}
+
+img:active {
+  transform: scale(1.5);
+  transition: transform .2s; /* Animation */
+  margin: 0px 15px 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 h4 {
