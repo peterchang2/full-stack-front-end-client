@@ -26,6 +26,16 @@ const onGetAllImages = function (event) {
     .catch(ui.failure)
 }
 
+const onCaptionUpdate = function (event) {
+  event.preventDefault()
+  const id = $(event.target).parent('div').data('id')
+  const caption = $('.update-caption-form-' + event.target.attributes['data-id'].value).val()
+  api.captionUpdate(id, caption)
+    .then(() => onGetAllImages(event))
+    // .then(ui.captionUpdateSuccess)
+    .catch(ui.failure)
+}
+
 const onGetImage = function (event) {
   event.preventDefault()
   const imageData = getFormFields(event.target)
@@ -49,5 +59,6 @@ module.exports = {
   onUpload,
   onGetImage,
   onGetAllImages,
-  onDeleteImage
+  onDeleteImage,
+  onCaptionUpdate
 }

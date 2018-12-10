@@ -18,6 +18,7 @@ $(() => {
   $('.get-image-by-id-form').on('submit', uploadEvents.onGetImage)
   $('.get-all-image-btn').on('click', uploadEvents.onGetAllImages)
   $('.img-wall').on('click', '.image-remove-btn', uploadEvents.onDeleteImage)
+  $('.img-wall').on('submit', '.caption-update', uploadEvents.onCaptionUpdate)
 
   $('.sign-up-btn').click(function () {
     setTimeout(function () {

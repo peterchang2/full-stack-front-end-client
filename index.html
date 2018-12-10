@@ -10,7 +10,8 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-
+      <link rel="icon" type="image/png" sizes="16x16" href="images/camera.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/camera.png">
     </head>
 
     <body>
@@ -75,7 +76,7 @@
 
       <div class="upload-section hidden">
         <form action="" class="upload-area" data-id='store.user.id'>
-          <h2 class="disclaimer">Please use a direct image link for now thanks</h2>
+          <h2 class="disclaimer">Please use a direct image link for now thanks. GIFV support WIP</h2>
           <input class='location' type="date" name="images[date]" placeholder="Date">
           <input class='location' type="text" name="images[caption]" placeholder="Caption">
           <input class='location img-link' type="text" name='images[url]' placeholder="Image Link">
@@ -83,11 +84,12 @@
         </form>
         <div class="upload-message-box"></div>
       </div>
+      <hr>
 
       <!-- ============== Wall of images here ===============  -->
       <div class="img-wall">
         <div class="image-wall"></div>
-        <ul class="list-of-ids"></ul>
+        <div class="gif-wall"></div>
       </div>
 
     </body>

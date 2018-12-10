@@ -31,17 +31,17 @@ const getImageIdSuccess = function (imageSuccess) {
 }
 
 const getAllImagesSuccess = function (getImageSuccess) {
-  // const images = []
   const y = getImageSuccess.images.forEach((x) => {
     // images.push(x)
-    console.log(x.url)
+    // console.log(getImageSuccess.url)
     if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
       const index = handle({ images: getImageSuccess.images })
       $('.image-wall').html(index)
-    } else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
-      const index2 = handle2({ images: getImageSuccess.images })
-      $('.image-wall').html(index2)
     }
+    // else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
+    //   const index2 = handle2({ gifs: getImageSuccess.images })
+    //   $('.gif-wall').html(index2)
+    // }
   })
 }
 

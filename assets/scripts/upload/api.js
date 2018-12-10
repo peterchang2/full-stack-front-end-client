@@ -23,6 +23,24 @@ const upload = function (date, caption, url) {
   })
 }
 
+const captionUpdate = function (id, caption) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/images/${id}`,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: JSON.stringify(
+      {
+        'image': {
+          'caption': caption,
+          'user_id': store.user.id
+        }
+      })
+  })
+}
+
 const getAllImages = function (inputData) {
   return $.ajax({
     method: 'GET',
@@ -92,5 +110,6 @@ module.exports = {
   upload,
   getImageId,
   getAllImages,
-  deleteImageById
+  deleteImageById,
+  captionUpdate
 }
