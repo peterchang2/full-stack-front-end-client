@@ -1,4 +1,3 @@
-
 ## Objective
 * Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) using HTML/CSS/JS/Ruby/Ruby on Rails.
 
