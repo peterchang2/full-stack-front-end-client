@@ -1,5 +1,6 @@
 //
 const handle = require('../templates/helpers/index.handlebars')
+const handle2 = require('../templates/helpers/index2.handlebars')
 const store = require('../store.js')
 // const events = require('./events.js')
 
@@ -30,12 +31,18 @@ const getImageIdSuccess = function (imageSuccess) {
 }
 
 const getAllImagesSuccess = function (getImageSuccess) {
-  // console.log(getImageSuccess.images)
-  const index = handle({ images: getImageSuccess.images })
-  $('.image-wall').html(index)
-  // $('.img-wall').html(`<img src="${getImageSuccess.images.url}">`)
-  // $('.upload-message-box').removeClass('error-message')
-  // $('.upload-message-box').addClass('success-message')
+  // const images = []
+  const y = getImageSuccess.images.forEach((x) => {
+    // images.push(x)
+    console.log(x.url)
+    if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
+      const index = handle({ images: getImageSuccess.images })
+      $('.image-wall').html(index)
+    } else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
+      const index2 = handle2({ images: getImageSuccess.images })
+      $('.image-wall').html(index2)
+    }
+  })
 }
 
 const deleteImageIdSuccess = function (deleteImageSuccess) {
