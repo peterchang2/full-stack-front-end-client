@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Arvo|Bree+Serif|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Bree+Serif|Poppins|Charmonman|Dancing+Script|Courgette');
 
 
 * {
@@ -8,6 +8,11 @@
 
 body {
   background-color: #fffaf3;
+}
+
+.subtitle {
+  font-family: 'Courgette', cursive;
+  font-size: 18px;
 }
 
 input:focus,
