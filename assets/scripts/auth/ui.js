@@ -50,10 +50,6 @@ const signInSuccess = function (signInResponse) {
 
 const changePasswordSuccess = function (changePasswordResponse) {
   $('.message-box').show(100)
-<<<<<<< HEAD
-
-=======
->>>>>>> feature
   $('.message-box').html('You Changed Password Successfully')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
