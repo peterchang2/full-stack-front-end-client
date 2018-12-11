@@ -37,10 +37,16 @@ $(() => {
   })
 
   $('.chg-pass-btn').click(function () {
-    $('.change-password-form').fadeToggle(300)
+    setTimeout(function () {
+      $('.change-password-form').fadeToggle()
+    }, 200)
+    $('.get-image-by-id-form').fadeOut(200)
   })
 
   $('.get-image-by-id-btn').click(function () {
-    $('.get-image-by-id-form').fadeToggle(300)
+    setTimeout(function () {
+      $('.get-image-by-id-form').fadeToggle()
+    }, 200)
+    $('.change-password-form').fadeOut(200)
   })
 })
