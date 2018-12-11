@@ -1,5 +1,5 @@
 ## Objective
-* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) using HTML/CSS/JS/Ruby/Rails.
+* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) [Heroku](https://picstafame.herokuapp.com/) using HTML/CSS/JS/Ruby/Rails.
 
 ## Technologies Used
 * HTML
