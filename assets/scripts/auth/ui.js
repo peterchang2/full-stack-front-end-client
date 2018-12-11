@@ -8,7 +8,7 @@ const failure = function (FailureResponse) {
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(200).empty()
   }, 3000)
 }
 
@@ -18,7 +18,7 @@ const passDoesntMatch = function (FailureResponse) {
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(300).empty()
   }, 5000)
 }
 
@@ -28,7 +28,7 @@ const signInFailure = function (FailureResponse) {
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(200).empty()
   }, 3000)
 }
 
@@ -38,7 +38,7 @@ const changePassFailure = function () {
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(200).empty()
   }, 3000)
 }
 
@@ -49,7 +49,7 @@ const signUpSuccess = function (signUpResponse) {
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(200).empty()
   }, 3000)
 }
 
@@ -72,7 +72,7 @@ const signInSuccess = function (signInResponse) {
   $('.sign-up-btn').hide()
   $('.sign-in-btn').hide()
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty(200)
+    $('.message-box').fadeOut(500).empty()
   }, 3000)
 }
 
@@ -89,7 +89,6 @@ const changePasswordSuccess = function (changePasswordResponse) {
 
 const signOutSuccess = function () {
   $('.message-box').show(100)
-
   $('.message-box').html('You Signed Out Successfully')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')

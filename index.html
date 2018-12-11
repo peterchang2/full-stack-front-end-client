@@ -19,7 +19,15 @@
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4 user-panel">
             <h5 class="text-white h4 user-panel-name"><span class="user-name"></span>User Panel</h5>
-            <div class="message-box"></div>
+
+            <button type="button" class="btn btn-outline-warning sign-in-btn">Sign-In</button>
+            <button type="button" class="btn btn-outline-warning sign-up-btn">Sign-Up</button>
+            <button type="button" class="btn btn-outline-warning sign-out-btn">Sign-Out</button>
+            <button type="button" class="btn btn-outline-warning chg-pass-btn">Change-Password</button>
+            <button type="button" class="btn btn-outline-warning get-all-image-btn">Show-All</button>
+            <button type="button" class="btn btn-outline-warning get-image-by-id-btn">Get-ID</button>
+            <!-- <button type="button" class="btn btn-outline-warning delete-image-btn">Delete</button> -->
+            <span class="text-muted"></span>
 
             <div class="auth-form" id="auth-form">
                <form class="sign-up-form" id="sign-up-form">
@@ -53,14 +61,8 @@
               </form> -->
             </div>
 
-            <button type="button" class="btn btn-outline-warning sign-in-btn">Sign-In</button>
-            <button type="button" class="btn btn-outline-warning sign-up-btn">Sign-Up</button>
-            <button type="button" class="btn btn-outline-warning sign-out-btn">Sign-Out</button>
-            <button type="button" class="btn btn-outline-warning chg-pass-btn">Change-Password</button>
-            <button type="button" class="btn btn-outline-warning get-all-image-btn">Show-All</button>
-            <button type="button" class="btn btn-outline-warning get-image-by-id-btn">Get-ID</button>
-            <!-- <button type="button" class="btn btn-outline-warning delete-image-btn">Delete</button> -->
-            <span class="text-muted"></span>
+            <div class="message-box"></div>
+
           </div>
         </div>
 
@@ -79,7 +81,7 @@
           <h2 class="disclaimer">Please use a direct image link for now thanks. GIFV support WIP. <span class='reddit'><a href="https://www.reddit.com/r/pics"> Reddit Here</a></span></h2>
           <input class='location' type="date" name="images[date]" placeholder="Date">
           <input class='location' type="text" name="images[caption]" placeholder="Caption">
-          <input class='location img-link' type="text" name='images[url]' placeholder="Image Link">
+          <input class='location img-link' type="text" name='images[url]' placeholder="Direct Image Link">
           <input class='location upload-btn submit' type="submit" value="Upload">
         </form>
         <div class="upload-message-box"></div>

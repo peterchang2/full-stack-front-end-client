@@ -6,8 +6,9 @@ const ui = require('./ui.js')
 const onUpload = function (event) {
   event.preventDefault()
   const uploadData = getFormFields(event.target)
-  if (uploadData.images.date === '' || uploadData.images.captio === '' || uploadData.images.url === '') {
-    $('.upload-message-box').html(`Fields cannot be empty`)
+  console.log((uploadData.images.url).includes('jpg'))
+  if (uploadData.images.date === '' || uploadData.images.caption === '' || uploadData.images.url === '') {
+    $('.upload-message-box').html(`Fields cannot be empty and link needs to be direct image link`)
     $('.upload-message-box').removeClass('success-message')
     $('.upload-message-box').addClass('error-message')
   } else {
