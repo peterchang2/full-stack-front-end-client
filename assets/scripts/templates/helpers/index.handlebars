@@ -1,7 +1,7 @@
 {{#each this as |images|}}
   {{#images}}
       <div class="image-url" data-id={{id}}>
-        <img src='{{url}}'> <h4>ID:{{id}} -- {{caption}}</h4>
+        <img src='{{url}}'> <h4>ID:{{id}} -- {{caption}} -- {{date}}</h4>
         <form class="caption-update" data-id={{id}}>
           <!-- <textarea rows="8" cols="80" class="update-caption-form-{{id}}" type="text" placeholder="New Caption" data-id={{id}}></textarea> -->
           <input class="update-caption-form-{{id}}" type="text" placeholder="New Caption" data-id={{id}}>
