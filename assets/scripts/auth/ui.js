@@ -72,7 +72,7 @@ const signInSuccess = function (signInResponse) {
   $('.sign-up-btn').hide()
   $('.sign-in-btn').hide()
   setTimeout(function () {
-    $('.message-box').fadeOut(500).empty()
+    $('.message-box').fadeOut(300).empty()
   }, 3000)
 }
 
