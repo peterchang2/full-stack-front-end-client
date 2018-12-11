@@ -1,5 +1,5 @@
 ## Objective
-* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) using HTML/CSS/JS/Ruby/Ruby on Rails.
+* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) using HTML/CSS/JS/Ruby/Rails.
 
 ## Technologies Used
 * HTML
@@ -29,9 +29,6 @@
 
 ## Wireframe
 ![Wireframe](https://i.imgur.com/QjahI1D.jpg?1)
-
-## ERD (entity relationship diagram)
-![ERD](https://i.imgur.com/maFeqZF.jpg?2)
 
 ## Future Implementations
 
