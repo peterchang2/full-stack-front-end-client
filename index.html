@@ -25,8 +25,8 @@
                <form class="sign-up-form" id="sign-up-form">
                 <legend>Sign-Up</legend>
                 <input class='input-field' type="email" name="credentials[email]" placeholder="Email">
-                <input class='input-field' type="password" name="credentials[password]" placeholder="Password">
-                <input class='input-field' type="password" name="credentials[password_confirmation]" placeholder="Confirm PW">
+                <input class='input-field pass' type="password" name="credentials[password]" required minlength='6' placeholder="Password">
+                <input class='input-field confirmpass' type="password" name="credentials[password_confirmation]" required minlength='6' placeholder="Confirm PW">
                 <input class='form-btn' type="submit" value="Sign-Up">
               </form>
               <form class="sign-in-form input-field" id="sign-in-form">
