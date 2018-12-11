@@ -3,25 +3,53 @@
 const store = require('../store.js')
 
 const failure = function (FailureResponse) {
+  $('.message-box').show(100)
   $('.message-box').html('Something Went Wrong, Try Again')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty(200)
+  }, 3000)
 }
+
+const passDoesntMatch = function (FailureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('Passwords Does Not Match')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty(200)
+  }, 5000)
+}
+
+const signInFailure = function (FailureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('Email or Password Is Wrong')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty(200)
+  }, 3000)
+}
+
 const changePassFailure = function () {
+  $('.message-box').show(100)
   $('.message-box').html('New Password Cannot Match Old Password')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty(200)
+  }, 3000)
 }
 
 const signUpSuccess = function (signUpResponse) {
   $('.message-box').show(100)
-
   $('.message-box').html('You Signed Up Successfully')
   $('.sign-up-form').slideUp(200)
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
+    $('.message-box').fadeOut(200).empty(200)
   }, 3000)
 }
 
@@ -44,7 +72,7 @@ const signInSuccess = function (signInResponse) {
   $('.sign-up-btn').hide()
   $('.sign-in-btn').hide()
   setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
+    $('.message-box').fadeOut(200).empty(200)
   }, 3000)
 }
 
@@ -89,6 +117,8 @@ module.exports = {
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
-  changePassFailure
+  changePassFailure,
+  signInFailure,
+  passDoesntMatch
 
 }
