@@ -8,6 +8,7 @@
 * JQuery
 * Ruby
 * Ruby on Rails
+* Handlebars
 * PostgreSQL
 * Heroku
 * AJAX
