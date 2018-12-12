@@ -44,17 +44,28 @@ const getImageIdSuccess = function (imageSuccess) {
 }
 
 const getAllImagesSuccess = function (getImageSuccess) {
-  const y = getImageSuccess.images.forEach((x) => {
-    console.log((x.url).includes('.jpg'))
-    if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
-      const index = handle({ images: getImageSuccess.images })
-      $('.image-wall').html(index)
-    }
-    // else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
-    //   const index2 = handle2({ gifs: getImageSuccess.images })
-    //   $('.gif-wall').html(index2)
-    // }
-  })
+  $('.image-wall').empty()
+  if (getImageSuccess.images.length === 0) {
+    $('.upload-message-box').show(100)
+    $('.upload-message-box').html(`Your Account Has No More Images`)
+    $('.upload-message-box').addClass('error-message')
+    $('.upload-message-box').removeClass('success-message')
+    setTimeout(function () {
+      $('.upload-message-box').fadeOut(200).empty(200)
+    }, 3000)
+  } else {
+    getImageSuccess.images.forEach((x) => {
+    // console.log((x.url).includes('.jpg'))
+      if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
+        const index = handle({ images: getImageSuccess.images })
+        $('.image-wall').html(index)
+      }
+      // else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
+      //   const index2 = handle2({ gifs: getImageSuccess.images })
+      //   $('.gif-wall').html(index2)
+      // }
+    })
+  }
 }
 
 const deleteImageIdSuccess = function (deleteImageSuccess) {

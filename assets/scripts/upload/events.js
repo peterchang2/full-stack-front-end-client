@@ -6,7 +6,7 @@ const ui = require('./ui.js')
 const onUpload = function (event) {
   event.preventDefault()
   const uploadData = getFormFields(event.target)
-  console.log((uploadData.images.url).includes('jpg'))
+  // console.log((uploadData.images.url).includes('jpg'))
   if (uploadData.images.date === '' || uploadData.images.caption === '' || uploadData.images.url === '') {
     $('.upload-message-box').html(`Fields cannot be empty and link needs to be direct image link`)
     $('.upload-message-box').removeClass('success-message')
