@@ -24,7 +24,7 @@ const passDoesntMatch = function (FailureResponse) {
 
 const signInFailure = function (FailureResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('Email or Password Is Wrong')
+  $('.message-box').html('Email And Password Does Not Match, or Account Does Not Exist')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
