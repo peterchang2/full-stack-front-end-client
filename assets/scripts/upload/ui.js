@@ -45,8 +45,7 @@ const getImageIdSuccess = function (imageSuccess) {
 
 const getAllImagesSuccess = function (getImageSuccess) {
   const y = getImageSuccess.images.forEach((x) => {
-    // images.push(x)
-    // console.log(getImageSuccess.url)
+    console.log((x.url).includes('.jpg'))
     if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
       const index = handle({ images: getImageSuccess.images })
       $('.image-wall').html(index)
