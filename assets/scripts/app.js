@@ -49,4 +49,12 @@ $(() => {
     }, 200)
     $('.change-password-form').fadeOut(200)
   })
+
+  $('.get-all-image-btn').click(function () {
+    setTimeout(function () {
+      $('.change-password-form').fadeToggle()
+    }, 200)
+    $('.get-image-by-id-form').fadeOut(200)
+    $('.change-password-form').fadeOut(200)
+  })
 })
