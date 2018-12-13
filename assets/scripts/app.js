@@ -20,6 +20,10 @@ $(() => {
   $('.img-wall').on('click', '.image-remove-btn', uploadEvents.onDeleteImage)
   $('.img-wall').on('submit', '.caption-update', uploadEvents.onCaptionUpdate)
 
+  $('.navbar-toggler').click(function () {
+    $('.input-field').val('')
+  })
+
   $('.sign-up-btn').click(function () {
     setTimeout(function () {
       $('.sign-up-form').fadeToggle()
