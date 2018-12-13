@@ -7,6 +7,7 @@ const onSignUp = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
   if ($('.pass').val() !== $('.confirmpass').val()) {
+    $(event.target).trigger('reset')
     ui.passDoesntMatch()
   } else {
     $(event.target).trigger('reset')
@@ -30,6 +31,7 @@ const onChangePassword = function () {
   event.preventDefault()
   const userData = getFormFields(event.target)
   if ($('.old-Pass').val() === $('.new-Pass').val()) {
+    $(event.target).trigger('reset')
     ui.changePassFailure()
   } else {
     $(event.target).trigger('reset')

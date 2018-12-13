@@ -8,9 +8,14 @@ const onUpload = function (event) {
   const uploadData = getFormFields(event.target)
   // console.log((uploadData.images.url).includes('jpg'))
   if (uploadData.images.date === '' || uploadData.images.caption === '' || uploadData.images.url === '') {
+    $('.upload-message-box').show(100)
     $('.upload-message-box').html(`Fields cannot be empty and link needs to be direct image link`)
     $('.upload-message-box').removeClass('success-message')
     $('.upload-message-box').addClass('error-message')
+    $(event.target).trigger('reset')
+    setTimeout(function () {
+      $('.upload-message-box').fadeOut(200).empty(200)
+    }, 2500)
   } else {
     // console.log('this is uploadData', uploadData.images.date)
     $(event.target).trigger('reset')
@@ -33,7 +38,7 @@ const onCaptionUpdate = function (event) {
   const caption = $('.update-caption-form-' + event.target.attributes['data-id'].value).val()
   api.captionUpdate(id, caption)
     .then(() => onGetAllImages(event))
-    // .then(ui.captionUpdateSuccess)
+  // .then(ui.captionUpdateSuccess)
     .catch(ui.failure)
 }
 
