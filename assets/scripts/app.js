@@ -20,6 +20,10 @@ $(() => {
   $('.img-wall').on('click', '.image-remove-btn', uploadEvents.onDeleteImage)
   $('.img-wall').on('submit', '.caption-update', uploadEvents.onCaptionUpdate)
 
+  $('.navbar-toggler').click(function () {
+    $('.input-field').val('')
+  })
+
   $('.sign-up-btn').click(function () {
     setTimeout(function () {
       $('.sign-up-form').fadeToggle()
@@ -51,6 +55,11 @@ $(() => {
       $('.get-image-by-id-form').fadeToggle()
       $('.input-field').val('')
     }, 200)
+    $('.change-password-form').fadeOut(200)
+  })
+
+  $('.get-all-image-btn').click(function () {
+    $('.get-image-by-id-form').fadeOut(200)
     $('.change-password-form').fadeOut(200)
   })
 })
