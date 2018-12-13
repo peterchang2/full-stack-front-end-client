@@ -1,5 +1,8 @@
 ## Objective
-* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) & [Heroku](https://picstafame.herokuapp.com/) using HTML/CSS/JS/Ruby/Rails.
+* Create a full stack application [Picsta](https://peterchang2.github.io/full-stack-front-end-client/) using [Heroku](https://picstafame.herokuapp.com/) and [Rail back-end](https://github.com/peterchang2/full-stack-back-end-api).
+
+## Description
+This is a simple image upload application by saving the direct image link in the database and appending the url with a image tag to the view. The eventual goal is to link my database with AWS so user can upload an actual image file. 
 
 ## Technologies Used
 * HTML
