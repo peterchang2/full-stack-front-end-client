@@ -1,13 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Arvo|Bree+Serif|Poppins|Charmonman|Dancing+Script|Courgette');
-
+// custom font from Google fonts
 
 * {
   font-family: 'Arvo', serif;
 }
 
 body {
-  background-color: #fffaf3;
+  background-color: #fffaf3; //egg shell white
 }
 
 .subtitle {
@@ -23,7 +23,7 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  background-color: #c7dbf4;
+  background-color: #c7dbf4; //light-blue background on focus
 }
 
 button:focus {
@@ -39,7 +39,7 @@ button:focus {
 }
 
 .success-message {
-  color: #2cb42c; // bright green
+  color: #2cb42c; // bright-green
 }
 
 .error-message {
@@ -52,6 +52,7 @@ button:focus {
   margin: 0;
 }
 
+// buttons hides on page load
 .sign-out-btn,
 .chg-pass-btn,
 .get-all-image-btn,
@@ -72,6 +73,7 @@ button:focus {
   border-bottom: 2px solid white;
 }
 
+// ============= AUTH FORM ===============
 .auth-form {
   width: 100%;
   text-align: right;
@@ -85,6 +87,7 @@ button:focus {
     border-right: none;
   }
 
+  // auth form input field hover color
   .style:hover {
     background: rgba(255,	246,	143, .03)
   }
@@ -104,6 +107,7 @@ button:focus {
     margin: 0 auto;
   }
 
+  // sign in/ sign up/ change password legend
   legend {
     margin-top: 8px;
     font-size: 20px;
@@ -125,7 +129,7 @@ button:focus {
   margin-top: 20px;
 }
 
-// ==============================================================
+// ==================== Uoload Section ======================
 .upload-section {
   .disclaimer {
     font-size: 12px;
@@ -145,7 +149,7 @@ button:focus {
   }
 }
 
-// ============================================================
+// ===================== Image Related Styles =======================
 img {
   height: 250px;
   width: 250px;
@@ -206,12 +210,12 @@ h4 {
   width: 75%;
 }
 
-.get-image {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  // display: inline-block;
-  // margin: 10px auto;
-  text-align: center;
-  width: 100%;
-}
+// .get-image {
+//   display: none;
+//   align-items: center;
+//   justify-content: center;
+//   // display: inline-block;
+//   // margin: 10px auto;
+//   text-align: center;
+//   width: 100%;
+// }
