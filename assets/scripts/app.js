@@ -23,6 +23,7 @@ $(() => {
   $('.sign-up-btn').click(function () {
     setTimeout(function () {
       $('.sign-up-form').fadeToggle()
+      $('.input-field').val('')
     }, 200)
     $('.sign-in-form').fadeOut(200)
     // $('.sign-in-form').fadeOut(300)
@@ -31,6 +32,7 @@ $(() => {
   $('.sign-in-btn').click(function () {
     setTimeout(function () {
       $('.sign-in-form').fadeToggle()
+      $('.input-field').val('')
     }, 200)
     // $('.sign-in-form').fadeIn(300)
     $('.sign-up-form').fadeOut(200)
@@ -39,6 +41,7 @@ $(() => {
   $('.chg-pass-btn').click(function () {
     setTimeout(function () {
       $('.change-password-form').fadeToggle()
+      $('.input-field').val('')
     }, 200)
     $('.get-image-by-id-form').fadeOut(200)
   })
@@ -46,6 +49,7 @@ $(() => {
   $('.get-image-by-id-btn').click(function () {
     setTimeout(function () {
       $('.get-image-by-id-form').fadeToggle()
+      $('.input-field').val('')
     }, 200)
     $('.change-password-form').fadeOut(200)
   })
